@@ -1,5 +1,7 @@
 # Travel Assistant (OpenRouter Free Models)
 
+![Travel Assistant UI](ui-home.png)
+
 A web app that provides destination advice, itineraries, budgets, and travel logistics. It uses OpenRouter's free router to generate responses and includes a clean, ChatGPT-style UI with a compact inline loading indicator.
 
 ## Highlights
@@ -125,8 +127,3 @@ Notes:
 
 - This app uses a server-side proxy, so your API key is never exposed in the browser.
 - The UI preserves formatting from model outputs (lists and line breaks).
-
-## Portfolio Tips
-
-- Add screenshots or a short demo clip to showcase the chat UI.
-- Highlight the guardrails, UX polish, and OpenRouter integration in your project summary.
