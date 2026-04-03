@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="title">Travel Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout layout-chat">
+     
+        <div class="panel-header">
+          <div class="welcome-header">
+            <h2>
+              <span data-i18n="welcomePrefix">Welcome! I am your</span>
+              <span class="highlight" data-i18n="welcomeRole">Travel Assistant</span>
+              <span aria-hidden="true">👋</span>
+            </h2>
+            <p class="sub-welcome" data-i18n="subWelcome">Everything you need to plan your next adventure, in one conversation.</p>
+          </div>
+          <div class="panel-actions">
+            <span id="status" class="status">Idle</span>
+            <label class="sr-only" for="language-select" data-i18n="languageLabel">Language</label>
+            <select id="language-select" class="lang-select">
+              <option value="auto" selected data-i18n="langAuto">Auto</option>
+              <option value="en" data-i18n="langEn">English</option>
+              <option value="fil" data-i18n="langFil">Filipino</option>
+              <option value="ja" data-i18n="langJa">Japanese</option>
+              <option value="zh-cn" data-i18n="langZhCn">Chinese (Simplified)</option>
+              <option value="zh-tw" data-i18n="langZhTw">Chinese (Traditional)</option>
+              <option value="ko" data-i18n="langKo">Korean</option>
+              <option value="es" data-i18n="langEs">Spanish</option>
+            </select>
+            <button id="clear-chat" class="clear-btn" type="button" data-i18n="clear">
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <div class="prompt-center" id="prompt-center">
+          <div class="prompt-grid" id="prompt-list"></div>
+        </div>
+
+        <div id="chat-window" class="chat-window" aria-live="polite"></div>
+        
+        <div class="chat-footer">
+          <div class="input-container">
+            <form id="chat-form" class="chat-form">
+              <label class="sr-only" for="prompt-input" data-i18n="messageLabel">Your message</label>
+              <textarea
+                id="prompt-input"
+                rows="1"
+                placeholder="Ask or search for anything..."
+                data-i18n-placeholder="promptPlaceholder"
+              ></textarea>
+              <button type="submit" id="submit-btn" class="btn-send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+    
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
