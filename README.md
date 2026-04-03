@@ -88,26 +88,6 @@ OpenRouter parameters (current):
 - Adjust UI copy and labels via the translation map in `client/modules/constants.js`.
 - Tweak layout and spacing in `client/styles.css` to match your portfolio branding.
 
-## CI/CD (Recommended for Learning)
-
-If you want to learn CI/CD for this project, the best place to start is GitHub Actions because it is widely used and beginner-friendly.
-
-Suggested pipeline goals:
-
-- Run install and basic checks on every push
-- Keep environment secrets safe (OpenRouter key)
-- Optional: deploy when merging to main
-
-Common CI steps:
-
-- `npm ci`
-- `npm run lint` (if you add linting)
-- `npm test` (if you add tests)
-
-Common deployment paths:
-
-- Render or Fly.io for a simple Express server
-- Vercel or Netlify for static hosting (if you later split the API)
 
 ## Deployment (GitHub + Vercel)
 
