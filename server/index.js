@@ -7,6 +7,7 @@ import { buildChatRouter } from "./routes/chat.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const IS_VERCEL = process.env.VERCEL === "1" || process.env.VERCEL === "true";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,6 +27,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(clientPath, "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+if (!IS_VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
